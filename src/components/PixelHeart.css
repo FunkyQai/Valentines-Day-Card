@@ -1,0 +1,35 @@
+.pixel-heart {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pixel-row {
+    display: flex;
+  }
+  
+  .pixel {
+    width: 1.5vw; /* Responsive size */
+    height: 1.5vw; /* Responsive size */
+    background-color: transparent;
+  }
+  
+  .pixel.red {
+    background-color: red;
+  }
+  
+  .pixel.black {
+    background-color: black;
+  }
+  
+  .pixel.darkred {
+    background-color: darkred;
+  }
+  
+  .pixel.white {
+    background-color: white;
+  }
