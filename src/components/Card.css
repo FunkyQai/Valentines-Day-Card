@@ -1,0 +1,136 @@
+/* Minecraft font */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.start-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  text-align: center;
+}
+
+.start-overlay h1 {
+  animation: fadeIn 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; 
+    height: 100vh;
+    background: url('../assets/images/background.png') center / cover no-repeat;
+  }
+
+  .valentine-message {
+    margin-top: 0;
+    font-size: 6.5rem;
+    color: #b0a7a5; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    font-family: 'VT323', monospace; 
+  }
+  
+  .container {
+    position: relative;
+    height: 40vh; 
+    width: 100%;
+    margin-top: 5vh;
+  }
+  
+/* Retro-style container for buttons */
+.buttons {
+    position: relative;
+    display: inline-flex;
+    bottom: 5vh;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0); 
+    backdrop-filter: blur(10px); 
+    padding: 3vh;
+    border-radius: 0; 
+    border: 2px solid #ccc; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); 
+  }
+  
+  /* Retro-style buttons */
+  #yesButton,
+  #noButton {
+    padding: 2vh 4vw 2vh 2vw; 
+    font-size: 2rem;
+    color: #444; 
+    border: 2px solid #ccc; 
+    border-radius: 0; 
+    cursor: pointer;
+    margin: 0 1vw; 
+    background-color: #fff; 
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive; 
+    box-shadow: 0 4px #ccc; 
+    transition: all 0.1s ease-in-out;
+    text-align: left; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    position: relative;
+    overflow: hidden; 
+  }
+  
+  /* Hover effect */
+  #yesButton:hover,
+  #noButton:hover {
+    background-color: #f0f0f0; 
+    color: #000; 
+    box-shadow: 0 4px #aaa; 
+  }
+  
+  /* Pressed effect */
+  #yesButton:active,
+  #noButton:active {
+    box-shadow: 0 2px #ccc;
+    transform: translateY(2px);
+  }
+  
+  /* Retro glowing border effect */
+  #yesButton::before,
+  #noButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid rgba(0, 0, 0, 0.1); 
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  #yesButton:hover::before,
+  #noButton:hover::before {
+    opacity: 1; /* Show glow on hover */
+  }

@@ -13,8 +13,8 @@
   }
   
   .pixel {
-    width: 1.5vw; /* Responsive size */
-    height: 1.5vw; /* Responsive size */
+    width: 1.5vw; 
+    height: 1.5vw; 
     background-color: transparent;
   }
   

@@ -31,32 +31,32 @@
 
 .sheep {
   position: absolute;
-  bottom: 15vh; /* Position sheep at the bottom */
-  width: 15vw; /* Increased width for bigger sheep */
-  height: 15vw; /* Increased height for bigger sheep */
-  transition: left 0.5s ease-in-out, right 0.5s ease-in-out; /* Smooth movement */
-  animation: fallAndBounce 1.5s ease-in-out; /* Apply the fall and bounce animation */
+  bottom: 15vh; 
+  width: 15vw; 
+  height: 15vw; 
+  transition: left 0.5s ease-in-out, right 0.5s ease-in-out; 
+  animation: fallAndBounce 1.5s ease-in-out; 
 }
 
 .sheep-body {
   position: absolute;
   width: 70%;
   height: 60%;
-  background-color: #ffffff; /* White body */
+  background-color: #ffffff; 
   top: 20%;
   left: 15%;
-  border-radius: 0; /* Remove border-radius for boxy look */
+  border-radius: 0; 
 }
 
 .sheep-head {
   position: absolute;
   width: 30%;
   height: 30%;
-  background-color: #000000; /* Black head */
+  background-color: #000000; 
   top: 10%;
-  left: 70%; /* Position head to face each other */
-  border-radius: 0; /* Remove border-radius for boxy look */
-  animation: tilt 2s infinite ease-in-out; /* Apply the tilt animation */
+  left: 70%; 
+  border-radius: 0; 
+  animation: tilt 2s infinite ease-in-out; 
 }
 
 .sheep-head.sheep-2-head {
@@ -67,7 +67,7 @@
   position: absolute;
   width: 10%;
   height: 20%;
-  background-color: #000000; /* Black legs */
+  background-color: #000000; 
   bottom: 0;
 }
 
@@ -83,26 +83,12 @@
   position: absolute;
   width: 10%;
   height: 10%;
-  background-color: #ffffff; /* White eye */
+  background-color: #ffffff; 
   top: 20%;
-  left: 75%; /* Position eye to face each other */
+  left: 75%; 
   border-radius: 50%;
 }
 
 .sheep-eye.sheep-2-eye {
   left: 15%; /* Position eye to face each other */
-}
-
-.sheep-mouth {
-  position: absolute;
-  width: 20%;
-  height: 10%;
-  background-color: #ffffff; /* White mouth */
-  bottom: 10%;
-  left: 40%;
-  border-radius: 2px; /* Slightly rounded corners for the mouth */
-}
-
-.sheep-mouth.sheep-2-mouth {
-  left: 40%; /* Position mouth to face each other */
 }
