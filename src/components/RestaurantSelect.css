@@ -1,0 +1,138 @@
+body {
+    background-color: #e0e0d1;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+  }
+  
+  .restaurant-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh;
+    text-align: center;
+    width: 90vw;
+    max-width: 60vw;
+    box-sizing: border-box;
+    background-color: #f5f5e0;
+    border: 0.5vh solid #a9a98f;
+    border-radius: 1vh;
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.1);
+  }
+  
+  .restaurant-selection h2 {
+    color: #556b2f;
+    margin-bottom: 2vh;
+    font-size: 3vh;
+  }
+  
+  .options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vh;
+    width: 100%;
+  }
+  
+  .option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e0e0d1;
+    padding: 2vh;
+    border-radius: 1vh;
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .option:hover {
+    transform: scale(1.02);
+  }
+  
+  .option input[type="radio"] {
+    width: 2.4vh;
+    height: 2.4vh;
+    margin-bottom: 1vh;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+  }
+  
+  .info img {
+    width: 25vh;
+    height: 12vh;
+    object-fit: cover;
+    border-radius: 1vh;
+  }
+  
+  .info a {
+    color: #556b2f;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .custom-inputs {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2vh;
+    gap: 1vh;
+  }
+  
+  .custom-inputs input {
+    padding: 0.8vh;
+    border: 0.1vh solid #ccc;
+    border-radius: 0.5vh;
+  }
+  
+  button {
+    background-color: #a9a98f;
+    font-family: 'Courier New', Courier, monospace;
+    color: #000;
+    border: none;
+    padding: 2vh 4vh;
+    border-radius: 0.5vh;
+    cursor: pointer;
+    font-size: 2.5vh;
+    transition: background-color 0.2s;
+    margin-top: 5vh;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #8f8f6f;
+  }
+  
+  @media (max-width: 600px) {
+    .options {
+      grid-template-columns: 1fr;
+    }
+  
+    .option {
+      padding: 1.5vh;
+    }
+  
+    .info img {
+      width: 8vh;
+      height: 8vh;
+    }
+  
+    button {
+      padding: 1.5vh 3vh;
+      font-size: 1.8vh;
+    }
+  }
