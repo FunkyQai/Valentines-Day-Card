@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./RestaurantSelect.css";
 import fizImage from "../assets/images/fiz.png";
 import oudImage from "../assets/images/oud.png";
@@ -22,16 +23,21 @@ const restaurants = [
   }
 ];
 
-function RestaurantSelect({ onSelectRestaurant }) {
+function RestaurantSelect() {
   const [selectedOption, setSelectedOption] = useState("");
   const [customRestaurant, setCustomRestaurant] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = () => {
+    let selectedRestaurant;
     if (selectedOption === "custom" && customRestaurant.trim() !== "") {
-      onSelectRestaurant({ name: customRestaurant });
+      selectedRestaurant = { name: customRestaurant };
     } else {
-      const chosenRestaurant = restaurants.find((r) => r.name === selectedOption);
-      if (chosenRestaurant) onSelectRestaurant(chosenRestaurant);
+      selectedRestaurant = restaurants.find((r) => r.name === selectedOption);
+    }
+
+    if (selectedRestaurant) {
+      navigate("/summary", { state: { selectedRestaurant } });
     }
   };
 

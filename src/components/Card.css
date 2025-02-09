@@ -40,29 +40,30 @@ body {
     overflow: hidden;
   }
   
-  .Card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end; 
-    height: 100vh;
-    background: url('../assets/images/background.png') center / cover no-repeat;
-  }
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; 
+  height: 100vh;
+  width: 100vw;
+  background: url('../assets/images/background.png') center / cover no-repeat;
+}
 
-  .valentine-message {
-    margin-top: 0;
-    font-size: 6.5rem;
-    color: #b0a7a5; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-    font-family: 'VT323', monospace; 
-  }
-  
-  .container {
-    position: relative;
-    height: 40vh; 
-    width: 100%;
-    margin-top: 5vh;
-  }
+.valentine-message {
+  margin-top: 0;
+  font-size: 6.5rem;
+  color: #b0a7a5; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  font-family: 'VT323', monospace; 
+}
+
+.container {
+  position: relative;
+  height: 40vh; 
+  width: 100%;
+  margin-top: 5vh;
+}
   
 /* Retro-style container for buttons */
 .buttons {
@@ -78,59 +79,79 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); 
   }
   
-  /* Retro-style buttons */
-  #yesButton,
-  #noButton {
-    padding: 2vh 4vw 2vh 2vw; 
-    font-size: 2rem;
-    color: #444; 
-    border: 2px solid #ccc; 
-    border-radius: 0; 
-    cursor: pointer;
-    margin: 0 1vw; 
-    background-color: #fff; 
-    text-transform: uppercase;
-    font-family: 'Press Start 2P', cursive; 
-    box-shadow: 0 4px #ccc; 
-    transition: all 0.1s ease-in-out;
-    text-align: left; 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; 
-    position: relative;
-    overflow: hidden; 
-  }
+/* Retro-style buttons */
+#yesButton,
+#noButton {
+  padding: 2vh 4vw 2vh 2vw; 
+  font-size: 2rem;
+  color: #444; 
+  border: 2px solid #ccc; 
+  border-radius: 0; 
+  cursor: pointer;
+  margin: 0 1vw; 
+  background-color: #fff; 
+  text-transform: uppercase;
+  font-family: 'Press Start 2P', cursive; 
+  box-shadow: 0 4px #ccc; 
+  transition: all 0.1s ease-in-out;
+  text-align: left; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  position: relative;
+  overflow: hidden; 
+}
   
-  /* Hover effect */
-  #yesButton:hover,
-  #noButton:hover {
-    background-color: #f0f0f0; 
-    color: #000; 
-    box-shadow: 0 4px #aaa; 
-  }
+/* Hover effect */
+#yesButton:hover,
+#noButton:hover {
+  background-color: #f0f0f0; 
+  color: #000; 
+  box-shadow: 0 4px #aaa; 
+}
   
-  /* Pressed effect */
-  #yesButton:active,
-  #noButton:active {
-    box-shadow: 0 2px #ccc;
-    transform: translateY(2px);
-  }
+/* Pressed effect */
+#yesButton:active,
+#noButton:active {
+  box-shadow: 0 2px #ccc;
+  transform: translateY(2px);
+}
   
-  /* Retro glowing border effect */
-  #yesButton::before,
-  #noButton::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 2px solid rgba(0, 0, 0, 0.1); 
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
+/* Retro glowing border effect */
+#yesButton::before,
+#noButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgba(0, 0, 0, 0.1); 
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
   
-  #yesButton:hover::before,
-  #noButton:hover::before {
-    opacity: 1; /* Show glow on hover */
-  }
+#yesButton:hover::before,
+#noButton:hover::before {
+  opacity: 1; /* Show glow on hover */
+}
+
+.proceed-button {
+  position: absolute;
+  top: 2vh;
+  right: 2vh;
+  background-color: #a9a98f;
+  color: #000;
+  border: none;
+  padding: 2vh 4vh;
+  border-radius: 0.5vh;
+  cursor: pointer;
+  font-size: 2.5vh;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.proceed-button:hover {
+  background-color: #8f8f6f;
+}
+
