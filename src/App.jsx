@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Card from "./components/Card";
 import RestaurantSelect from "./components/RestaurantSelect";
-import Summary from "./components/Summary"
+import Summary from "./components/Summary";
 
 function App() {
   return (
